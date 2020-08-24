@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: New Release
         id: build
-        uses: spencerbeggs/aws-cdk-dependencies-action@v0.0.1
+        uses: spencerbeggs/aws-cdk-dependencies-action@0.0.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           release: "1.60.0"
