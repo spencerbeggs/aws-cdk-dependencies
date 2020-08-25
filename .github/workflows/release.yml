@@ -11,10 +11,10 @@ jobs:
     steps:
       - name: New Release
         id: build
-        uses: spencerbeggs/aws-cdk-dependencies-action@0.0.4
+        uses: spencerbeggs/aws-cdk-dependencies-action@v0.0.5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          release: "1.60.0"
+          release: "v1.60.0"
       - name: Echo Output
         run: |
           echo ${{needs.process.outputs.dependencies}}
