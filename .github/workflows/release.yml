@@ -9,9 +9,11 @@ jobs:
     outputs:
       dependencies: ${{ steps.build.outputs.dependencies }}
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: New Release
         id: build
-        uses: spencerbeggs/aws-cdk-dependencies-action@v0.0.8
+        uses: spencerbeggs/aws-cdk-dependencies-action@v0.0.9
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           release: "v1.60.0"
